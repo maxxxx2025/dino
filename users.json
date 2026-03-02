@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "email": "admin@aedkeys.app",
+    "password": "$2a$12$P6ZqpLRcECqZDoOnWVK4h.ANJFkHoKMMK9h4Dh0tybtqUAzndHriu",
+    "role": "admin",
+    "kycStatus": "approved",
+    "kycReason": "",
+    "kycDocs": null,
+    "walletBalance": 0,
+    "lockedBalance": 0,
+    "createdAt": "2026-01-01T09:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "username": "user",
+    "email": "user@aedkeys.app",
+    "password": "$2a$12$cTY0KmIjlgbcEkQZpu4u1uD.xvCueCrqUMg400on8qwysjQL15pWa",
+    "role": "user",
+    "kycStatus": "approved",
+    "kycReason": "",
+    "kycDocs": {
+      "idDocument": "demo://id/user",
+      "selfie": "demo://selfie/user",
+      "submittedAt": "2026-01-03T11:00:00.000Z"
+    },
+    "walletBalance": 420000,
+    "lockedBalance": 160000,
+    "createdAt": "2026-01-02T10:30:00.000Z"
+  },
+  {
+    "id": 3,
+    "username": "max",
+    "email": "ichimokou2020@gmail.com",
+    "password": "$2a$10$.03j.aHXGKgqfmyV84TcpeiH9V97cfBFJRILqQ9Ni26rlt/bGqViG",
+    "role": "user",
+    "kycStatus": "approved",
+    "kycReason": "",
+    "kycDocs": null,
+    "walletBalance": 0,
+    "lockedBalance": 0,
+    "createdAt": "2026-02-26T15:42:07.393Z"
+  }
+]

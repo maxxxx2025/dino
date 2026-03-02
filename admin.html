@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Control Center</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero-bar">
+      <h1>Admin Control Center · Tokenized Investment Platform</h1>
+      <div class="hero-actions">
+        <button id="openMarketplaceBtn" class="btn-ghost">Vue Marketplace</button>
+        <button id="refreshBtn" class="btn-ghost">Actualiser</button>
+        <button id="logoutBtn" class="btn-ghost">Déconnexion</button>
+      </div>
+    </header>
+
+    <p id="globalStatus" class="status"></p>
+
+    <div class="grid">
+      <section class="card col-12">
+        <h2>Overview</h2>
+        <div id="metricsRow" class="metric-row"></div>
+      </section>
+
+      <section class="card col-6">
+        <h2>KYC Queue</h2>
+        <table>
+          <thead><tr><th>User</th><th>Status</th><th>Docs</th><th>Actions</th></tr></thead>
+          <tbody id="kycBody"></tbody>
+        </table>
+      </section>
+
+      <section class="card col-6">
+        <h2>Deposit Validation</h2>
+        <table>
+          <thead><tr><th>ID</th><th>User</th><th>Amount</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody id="depositsBody"></tbody>
+        </table>
+      </section>
+
+      <section class="card col-12">
+        <h2>Gestion Utilisateurs</h2>
+        <form id="userForm" class="fields">
+          <input type="hidden" id="userId" />
+          <input id="userUsername" type="text" placeholder="Username" required />
+          <input id="userEmail" type="email" placeholder="Email" required />
+          <input id="userPassword" type="password" placeholder="Mot de passe" required />
+          <select id="userRole" required>
+            <option value="user">user</option>
+            <option value="admin">admin</option>
+          </select>
+          <div class="actions-row">
+            <button class="btn-primary" type="submit" id="saveUserBtn">Ajouter utilisateur</button>
+            <button class="btn-secondary" type="button" id="cancelUserBtn">Annuler</button>
+          </div>
+        </form>
+        <table>
+          <thead><tr><th>ID</th><th>Username</th><th>Email</th><th>Role</th><th>KYC</th><th>Wallet</th><th>Actions</th></tr></thead>
+          <tbody id="usersBody"></tbody>
+        </table>
+      </section>
+
+      <section class="card col-12">
+        <h2>Gestion des Assets / SPV</h2>
+        <form id="assetForm" class="fields">
+          <input type="hidden" id="assetId" />
+          <input id="assetReference" type="text" placeholder="Reference" required />
+          <input id="assetTitle" type="text" placeholder="Titre" required />
+          <select id="assetCategory" required>
+            <option value="real_estate">Real Estate</option>
+            <option value="cars">Cars</option>
+          </select>
+          <input id="assetPrix" type="number" min="0" step="0.01" placeholder="Prix / Target" required />
+          <input id="assetSuperficie" type="number" min="0" step="0.01" placeholder="Superficie (0 pour car)" />
+          <input id="assetQuartier" type="text" placeholder="Quartier" required />
+          <input id="assetPhoto" type="text" placeholder="Photo URL" required />
+          <input id="assetDate" type="date" required />
+          <input id="assetRentabilite" type="number" step="0.01" placeholder="Rentabilité estimée" required />
+          <input id="assetEvolution" type="number" step="0.01" placeholder="Evolution prix/m²" required />
+          <input id="assetMinInvest" type="number" min="50000" step="0.01" placeholder="Min investment" value="50000" required />
+          <input id="assetReserveRate" type="number" min="0" max="1" step="0.01" placeholder="Reserve rate" value="0.1" required />
+          <div class="actions-row">
+            <button class="btn-primary" type="submit" id="saveAssetBtn">Ajouter asset</button>
+            <button class="btn-secondary" type="button" id="cancelAssetBtn">Annuler</button>
+          </div>
+        </form>
+        <table>
+          <thead><tr><th>ID</th><th>Asset</th><th>Cat.</th><th>Funding</th><th>Score</th><th>SPV</th><th>Actions</th></tr></thead>
+          <tbody id="assetsBody"></tbody>
+        </table>
+      </section>
+
+      <section class="card col-6">
+        <h2>Revenue Distribution</h2>
+        <form id="distributionForm" class="fields">
+          <input id="distAssetId" type="number" min="1" placeholder="Asset ID" required />
+          <input id="distAmount" type="number" min="1" step="0.01" placeholder="Gross amount" required />
+          <input id="distNote" type="text" placeholder="Note" />
+          <div class="actions-row"><button class="btn-primary" type="submit">Distribuer</button></div>
+        </form>
+        <table>
+          <thead><tr><th>ID</th><th>Asset</th><th>Gross</th><th>Net</th><th>Date</th></tr></thead>
+          <tbody id="distributionsBody"></tbody>
+        </table>
+      </section>
+
+      <section class="card col-6">
+        <h2>Usage Requests + Refund Requests</h2>
+        <table>
+          <thead><tr><th>Type</th><th>ID</th><th>User</th><th>Ref</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody id="opsBody"></tbody>
+        </table>
+      </section>
+
+      <section class="card col-12">
+        <h2>Analytics</h2>
+        <div class="canvas-row">
+          <div class="chart-wrap"><canvas id="fundingChart" height="180"></canvas></div>
+          <div class="chart-wrap"><canvas id="scoreChart" height="180"></canvas></div>
+        </div>
+      </section>
+
+      <section class="card col-12">
+        <h2>Blockchain Trace (Audit)</h2>
+        <table>
+          <thead><tr><th>TX Hash</th><th>Type</th><th>Actor</th><th>Date</th></tr></thead>
+          <tbody id="logsBody"></tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

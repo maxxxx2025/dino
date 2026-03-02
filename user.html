@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Investor Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero-bar">
+      <h1 id="welcomeTitle">Investor Dashboard</h1>
+      <div class="hero-actions">
+        <button id="openMarketplaceBtn" class="btn-ghost">Catalogue actifs</button>
+        <button id="refreshBtn" class="btn-ghost">Actualiser</button>
+        <button id="logoutBtn" class="btn-ghost">Déconnexion</button>
+      </div>
+    </header>
+
+    <p id="globalStatus" class="status"></p>
+
+    <div class="grid">
+      <section class="card col-8">
+        <h2>KYC</h2>
+        <div id="kycState" class="small"></div>
+        <form id="kycForm" class="fields" style="margin-top:10px;">
+          <input id="idDocument" type="text" placeholder="Lien document d'identité (URL/data URI)" required />
+          <input id="selfie" type="text" placeholder="Lien selfie (URL/data URI)" required />
+          <div class="actions-row">
+            <button class="btn-primary" type="submit">Soumettre KYC</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card col-4">
+        <h2>Wallet AEDkeys</h2>
+        <div class="metric-row">
+          <div class="metric"><div class="k">Total</div><div class="v" id="walletTotal">0</div></div>
+          <div class="metric"><div class="k">Bloqué</div><div class="v" id="walletLocked">0</div></div>
+          <div class="metric"><div class="k">Disponible</div><div class="v" id="walletAvailable">0</div></div>
+        </div>
+      </section>
+
+      <section class="card col-6">
+        <h2>Déposer des fonds</h2>
+        <p class="small">IBAN société: <strong>AE070331234567890123456</strong></p>
+        <form id="depositForm" class="fields">
+          <input type="number" id="depositAmount" min="1" step="0.01" placeholder="Montant" required />
+          <input type="text" id="depositRef" placeholder="Référence de virement" required />
+          <input type="text" id="depositDesc" placeholder="Description" required />
+          <div class="actions-row">
+            <button type="submit" class="btn-primary">Soumettre le dépôt</button>
+          </div>
+        </form>
+        <table>
+          <thead><tr><th>ID</th><th>Montant</th><th>Status</th><th>Référence</th></tr></thead>
+          <tbody id="depositsBody"></tbody>
+        </table>
+      </section>
+
+      <section class="card col-6">
+        <h2>Mes investissements</h2>
+        <table>
+          <thead><tr><th>Actif</th><th>Montant</th><th>Part %</th><th>Status</th><th>Action</th></tr></thead>
+          <tbody id="investmentsBody"></tbody>
+        </table>
+      </section>
+
+      <section class="card col-12">
+        <h2>Demandes d'utilisation (max 20 jours/an/actif)</h2>
+        <form id="usageForm" class="fields">
+          <input type="number" id="usageAssetId" placeholder="Asset ID" min="1" required />
+          <input type="date" id="usageStart" required />
+          <input type="date" id="usageEnd" required />
+          <input type="number" id="usageDays" min="1" max="20" placeholder="Jours demandés" required />
+          <input type="text" id="usageNote" placeholder="Note" />
+          <div class="actions-row">
+            <button class="btn-primary" type="submit">Envoyer la demande</button>
+          </div>
+        </form>
+        <table>
+          <thead><tr><th>ID</th><th>Asset</th><th>Période</th><th>Jours</th><th>Status</th></tr></thead>
+          <tbody id="usageBody"></tbody>
+        </table>
+      </section>
+
+      <section class="card col-6">
+        <h2>Distributions locatives</h2>
+        <table>
+          <thead><tr><th>Distribution</th><th>Actif</th><th>Montant reçu</th><th>Date</th></tr></thead>
+          <tbody id="distributionsBody"></tbody>
+        </table>
+      </section>
+
+      <section class="card col-6">
+        <h2>Traçabilité blockchain</h2>
+        <table>
+          <thead><tr><th>TX</th><th>Type</th><th>Date</th></tr></thead>
+          <tbody id="logsBody"></tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+
+  <script src="user.js"></script>
+</body>
+</html>

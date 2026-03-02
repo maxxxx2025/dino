@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "userId": 2,
+    "amount": 250000,
+    "transferDescription": "Initial funding",
+    "transferReference": "TRX-AED-0001",
+    "iban": "AE070331234567890123456",
+    "status": "approved",
+    "createdAt": "2026-01-04T08:00:00.000Z",
+    "reviewedAt": "2026-01-04T10:00:00.000Z",
+    "reviewedBy": 1,
+    "rejectionReason": ""
+  },
+  {
+    "id": 2,
+    "userId": 2,
+    "amount": 200000,
+    "transferDescription": "Top up",
+    "transferReference": "TRX-AED-0002",
+    "iban": "AE070331234567890123456",
+    "status": "approved",
+    "createdAt": "2026-02-01T12:00:00.000Z",
+    "reviewedAt": "2026-02-01T15:00:00.000Z",
+    "reviewedBy": 1,
+    "rejectionReason": ""
+  }
+]

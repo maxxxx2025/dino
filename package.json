@@ -1,0 +1,17 @@
+{
+  "name": "mini-auth-node",
+  "version": "1.0.0",
+  "description": "Mini projet Node.js authentification frontend/backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "chart.js": "^4.5.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dino Duel Race</title>
+  <link rel="stylesheet" href="dino-race.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="panel">
+      <h1>Dino Duel Race</h1>
+      <p class="subtitle">2 players, 10 dinosaurs, 100 starting coins each.</p>
+
+      <div class="controls">
+        <input id="playerName" type="text" maxlength="20" placeholder="Your name" />
+        <button id="createRoomBtn">Create Room</button>
+      </div>
+
+      <div class="controls">
+        <input id="roomCodeInput" type="text" maxlength="6" placeholder="Room code" />
+        <button id="joinRoomBtn">Join Room</button>
+      </div>
+
+      <div class="status-grid">
+        <div><span class="label">Room:</span> <strong id="roomCode">-</strong></div>
+        <div><span class="label">You:</span> <strong id="youName">-</strong></div>
+        <div><span class="label">Coins:</span> <strong id="youCoins">-</strong></div>
+        <div><span class="label">State:</span> <strong id="raceState">waiting</strong></div>
+      </div>
+
+      <h2>Choose Dinosaur</h2>
+      <div id="dinoGrid" class="dino-grid"></div>
+
+      <div class="bet-row">
+        <input id="betInput" type="number" min="1" step="1" placeholder="Bet amount" />
+        <button id="setBetBtn">Set Bet</button>
+      </div>
+
+      <div class="action-row">
+        <button id="startRaceBtn">Start Race</button>
+        <button id="resetRaceBtn">Rematch</button>
+      </div>
+
+      <p id="message" class="message"></p>
+      <div id="playersInfo" class="players-info"></div>
+    </section>
+
+    <section class="track-wrap">
+      <canvas id="raceCanvas" width="900" height="360"></canvas>
+    </section>
+  </main>
+
+  <script src="dino-race.js"></script>
+</body>
+</html>

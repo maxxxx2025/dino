@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "assetId": 2,
+    "grossAmount": 20000,
+    "reservePart": 2000,
+    "netAmount": 18000,
+    "allocations": [
+      {
+        "investmentId": 2,
+        "userId": 2,
+        "amount": 18000
+      }
+    ],
+    "note": "January rentals",
+    "createdAt": "2026-02-20T14:00:00.000Z",
+    "createdBy": 1,
+    "stablecoin": "AEDkeys"
+  }
+]

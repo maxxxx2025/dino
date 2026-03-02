@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketplace Assets</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero-bar">
+      <h1>Marketplace Tokenized Assets</h1>
+      <div class="hero-actions">
+        <button id="backBtn" class="btn-ghost">Retour dashboard</button>
+        <button id="logoutBtn" class="btn-ghost">Déconnexion</button>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Filtres</h2>
+      <div class="fields">
+        <input id="searchInput" type="text" placeholder="Référence / quartier / titre" />
+        <select id="categoryFilter">
+          <option value="">Toutes catégories</option>
+          <option value="real_estate">Real Estate</option>
+          <option value="cars">Cars</option>
+        </select>
+        <select id="statusFilter">
+          <option value="">Tous statuts</option>
+          <option value="pending">Pending</option>
+          <option value="funding_in_progress">Funding In Progress</option>
+          <option value="funded">100% Funded</option>
+        </select>
+        <input id="minScore" type="number" step="0.01" placeholder="Score min" />
+        <select id="sortBy">
+          <option value="score-desc">Score décroissant</option>
+          <option value="score-asc">Score croissant</option>
+          <option value="funded-desc">Funding % décroissant</option>
+          <option value="funded-asc">Funding % croissant</option>
+          <option value="price-desc">Prix décroissant</option>
+          <option value="price-asc">Prix croissant</option>
+        </select>
+      </div>
+      <p id="pageStatus" class="status"></p>
+    </section>
+
+    <section class="card" style="margin-top:12px;">
+      <h2>Opportunités</h2>
+      <div id="assetGrid" class="card-grid"></div>
+    </section>
+  </div>
+
+  <script src="properties.js"></script>
+</body>
+</html>

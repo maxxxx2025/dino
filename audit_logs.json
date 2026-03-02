@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "txHash": "0xseed001",
+    "type": "USER_REGISTERED",
+    "actorId": 2,
+    "details": {
+      "email": "user@aedkeys.app"
+    },
+    "createdAt": "2026-01-02T10:30:00.000Z",
+    "network": "Arbitrum (simulated)"
+  },
+  {
+    "id": 2,
+    "txHash": "0xseed002",
+    "type": "DEPOSIT_APPROVED_AND_STABLECOIN_MINTED",
+    "actorId": 1,
+    "details": {
+      "depositId": 1,
+      "userId": 2,
+      "amount": 250000,
+      "stablecoin": "AEDkeys"
+    },
+    "createdAt": "2026-01-04T10:00:00.000Z",
+    "network": "Arbitrum (simulated)"
+  },
+  {
+    "id": 3,
+    "txHash": "0xc995cbf11d9a19c9a997885",
+    "type": "USER_LOGIN",
+    "actorId": 1,
+    "details": {
+      "role": "admin"
+    },
+    "createdAt": "2026-02-26T15:37:55.077Z",
+    "network": "Arbitrum (simulated)"
+  },
+  {
+    "id": 4,
+    "txHash": "0x4bdf598b3948219c9a997ac4",
+    "type": "USER_LOGIN",
+    "actorId": 2,
+    "details": {
+      "role": "user"
+    },
+    "createdAt": "2026-02-26T15:37:55.652Z",
+    "network": "Arbitrum (simulated)"
+  },
+  {
+    "id": 5,
+    "txHash": "0x5401ac939ab219c9a9b8e60",
+    "type": "USER_LOGIN",
+    "actorId": 1,
+    "details": {
+      "role": "admin"
+    },
+    "createdAt": "2026-02-26T15:40:11.744Z",
+    "network": "Arbitrum (simulated)"
+  },
+  {
+    "id": 6,
+    "txHash": "0x6167fb77ee9af19c9a9c981c",
+    "type": "SPV_STATUS_UPDATED",
+    "actorId": 1,
+    "details": {
+      "assetId": 1,
+      "spvStatus": "active"
+    },
+    "createdAt": "2026-02-26T15:41:19.772Z",
+    "network": "Arbitrum (simulated)"
+  },
+  {
+    "id": 7,
+    "txHash": "0xf8f1359b2ef1a19c9a9ca8a3",
+    "type": "SPV_STATUS_UPDATED",
+    "actorId": 1,
+    "details": {
+      "assetId": 1,
+      "spvStatus": "active"
+    },
+    "createdAt": "2026-02-26T15:41:24.003Z",
+    "network": "Arbitrum (simulated)"
+  },
+  {
+    "id": 8,
+    "txHash": "0x2f03976d2a2ae19c9a9ce891",
+    "type": "USER_LOGOUT",
+    "actorId": 1,
+    "details": {},
+    "createdAt": "2026-02-26T15:41:40.370Z",
+    "network": "Arbitrum (simulated)"
+  },
+  {
+    "id": 9,
+    "txHash": "0x673ed761983cc19c9a9d5223",
+    "type": "USER_REGISTERED",
+    "actorId": 3,
+    "details": {
+      "email": "ichimokou2020@gmail.com"
+    },
+    "createdAt": "2026-02-26T15:42:07.395Z",
+    "network": "Arbitrum (simulated)"
+  },
+  {
+    "id": 10,
+    "txHash": "0xcae03705baa6119c9a9d700c",
+    "type": "USER_LOGIN",
+    "actorId": 3,
+    "details": {
+      "role": "user"
+    },
+    "createdAt": "2026-02-26T15:42:15.052Z",
+    "network": "Arbitrum (simulated)"
+  },
+  {
+    "id": 11,
+    "txHash": "0x0cfa534249cbf19c9aa18771",
+    "type": "USER_LOGOUT",
+    "actorId": 3,
+    "details": {},
+    "createdAt": "2026-02-26T15:46:43.185Z",
+    "network": "Arbitrum (simulated)"
+  },
+  {
+    "id": 12,
+    "txHash": "0x15eca9a7ed5dd19c9aa1a54d",
+    "type": "USER_LOGIN",
+    "actorId": 1,
+    "details": {
+      "role": "admin"
+    },
+    "createdAt": "2026-02-26T15:46:50.829Z",
+    "network": "Arbitrum (simulated)"
+  },
+  {
+    "id": 13,
+    "txHash": "0x48fef2a3d009919c9aa2116a",
+    "type": "KYC_APPROVED",
+    "actorId": 1,
+    "details": {
+      "targetUserId": 3
+    },
+    "createdAt": "2026-02-26T15:47:18.506Z",
+    "network": "Arbitrum (simulated)"
+  }
+]

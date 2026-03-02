@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AEDkeys | Tokenized Investment</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-wrap">
+    <div class="login-grid">
+      <section class="hero-panel">
+        <h1>Investissez en fractions sur des actifs premium.</h1>
+        <p>Plateforme tokenisée avec traçabilité blockchain, SPV, stablecoin interne et distribution automatisée.</p>
+        <ul>
+          <li>KYC vérifié avant toute opération</li>
+          <li>Dépôts bancaires + émission AEDkeys</li>
+          <li>Investissements dès 50 000 USD</li>
+          <li>Distribution locative proportionnelle</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <div class="tab-switch">
+          <button id="loginTab" class="btn-secondary active" type="button">Connexion</button>
+          <button id="registerTab" class="btn-secondary" type="button">Inscription</button>
+        </div>
+
+        <p id="authStatus" class="status"></p>
+
+        <form id="loginForm" class="fields" style="margin-top:12px;">
+          <input type="text" id="loginUsername" placeholder="Username ou Email" required />
+          <input type="password" id="loginPassword" placeholder="Mot de passe" required />
+          <div class="actions-row col-12">
+            <button class="btn-primary" type="submit">Se connecter</button>
+          </div>
+        </form>
+
+        <form id="registerForm" class="fields hidden" style="margin-top:12px;">
+          <input type="text" id="registerUsername" placeholder="Username" required />
+          <input type="email" id="registerEmail" placeholder="Email" required />
+          <input type="password" id="registerPassword" placeholder="Mot de passe" required />
+          <div class="actions-row col-12">
+            <button class="btn-primary" type="submit">Créer le compte</button>
+          </div>
+        </form>
+
+        <p class="small">Comptes démo: admin/admin123 et user/user123</p>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
