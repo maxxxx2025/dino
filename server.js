@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
-const JWT_SECRET = 'replace_this_with_a_strong_secret';
+const JWT_SECRET = process.env.JWT_SECRET || 'dev_secret';;
 const STABLECOIN_SYMBOL = 'AEDkeys';
 const MIN_INVESTMENT = 50000;
 const REFUND_WAIT_DAYS = 60;
